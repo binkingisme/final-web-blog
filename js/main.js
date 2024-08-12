@@ -12,6 +12,20 @@
             updateViews(`post-${index + 1}`);
         });
     });
+    document.addEventListener("DOMContentLoaded", function() {
+      // Hàm để tăng số lượt xem
+      function incrementViews(viewId) {
+          const viewElement = document.getElementById(viewId);
+          if (viewElement) {
+              let currentViews = parseInt(viewElement.textContent, 10);
+              currentViews++;
+              viewElement.textContent = currentViews;
+          }
+      }
+  
+      // Gán hàm incrementViews vào global scope để có thể gọi từ HTML
+      window.incrementViews = incrementViews;
+  });
 
     // Slideshow functionality
     document.addEventListener("DOMContentLoaded", function() {
