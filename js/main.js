@@ -1,68 +1,43 @@
-// Function to fetch blog posts from an API
-async function fetchBlogPosts() {
-    try {
-        const response = await fetch('https://api.example.com/blogposts');
-        const posts = await response.json();
-        displayBlogPosts(posts);
-    } catch (error) {
-        console.error('Error fetching blog posts:', error);
+    // Function to update views
+    function updateViews(postId) {
+        const viewsElement = document.getElementById(`views-${postId}`);
+        let views = parseInt(viewsElement.innerText);
+        views += 1;
+        viewsElement.innerText = views;
     }
-}
 
-// Function to display blog posts on the page
-function displayBlogPosts(posts) {
-    const postsContainer = document.getElementById('posts-container');
-    postsContainer.innerHTML = ''; // Clear any existing posts
-
-    posts.forEach(post => {
-        const postElement = document.createElement('div');
-        postElement.className = 'post';
-        postElement.innerHTML = `
-            <h2>${post.title}</h2>
-            <p>${post.excerpt}</p>
-            <button onclick="readMore(${post.id})">Read More</button>
-        `;
-        postsContainer.appendChild(postElement);
+    // Call updateViews function when a post is viewed
+    document.querySelectorAll('.card a').forEach((link, index) => {
+        link.addEventListener('click', () => {
+            updateViews(`post-${index + 1}`);
+        });
     });
-}
 
-// Function to handle clicking on a blog post to read more
-function readMore(postId) {
-    // Logic to display the full post content
-    console.log('Read more about post:', postId);
-    // You can fetch the full post details and display them in a modal or a new page
-}
-
-// Add event listeners for user interactions
-document.addEventListener('DOMContentLoaded', () => {
-    fetchBlogPosts();
-});
-
-    // add how much views the post has
-document.addEventListener('DOMContentLoaded', () => {
-    fetchBlogPosts();
-    fetchPostViews();
-});
-
-async function fetchPostViews() {
-    try {
-        const response = await fetch('https://api.example.com/postviews');
-        const postViews = await response.json();
-        displayPostViews(postViews);
-    } catch (error) {
-        console.error('Error fetching post views:', error);
-    }
-}
-
-function displayPostViews(postViews) {
-    const postsContainer = document.getElementById('posts-container');
-    const postElements = postsContainer.getElementsByClassName('post');
-
-    postViews.forEach((views, index) => {
-        const postElement = postElements[index];
-        const viewsElement = document.createElement('p');
-        viewsElement.className = 'views';
-        viewsElement.textContent = `Views: ${views.count}`;
-        postElement.appendChild(viewsElement);
-    });
-}
+    // Slideshow functionality
+    document.addEventListener("DOMContentLoaded", function() {
+        let slideIndex = 0;
+        showSlides();
+      
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+      
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("slide");
+          if (n === undefined) { n = ++slideIndex; }
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slides[slideIndex-1].style.display = "block";
+        }
+      
+        setInterval(() => {
+          showSlides();
+        }, 3000); // Tự động chuyển slide sau mỗi 3 giây
+      
+        document.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
+        document.querySelector('.next').addEventListener('click', () => plusSlides(1));
+      });
