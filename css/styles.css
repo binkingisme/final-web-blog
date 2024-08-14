@@ -49,20 +49,6 @@ body {
   display: none;
 }
 
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
 
 .next {
   right: 0;
@@ -142,7 +128,7 @@ body {
 
 /* Banner */
 .banner {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,7 +149,11 @@ header {
   width: 100%;
   z-index: 1000; /* Ensures header is above the video */
 }
-
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .navbar__logo img {
   width: 180px;
   cursor: pointer;

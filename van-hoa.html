@@ -17,88 +17,84 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+    <body>
 
-    <!-- Video Background -->
-    <div class="video-background">
-        <video autoplay loop muted playsinline class="background-video">
-            <source src="./img/video.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- Header with Navbar -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #fdfeff6e">
-            <div class="container-fluid">
-                <div class="navbar__logo">
-                    <img src="./img/1722658958865.png" alt="logo image" />
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
-                            <div class="dropdown-menu">
-                              <ul>
-                                  <li><a class="dropdown-item" href="the-thao.html">Thể thao</a></li>
-                              </ul>
-                              <ul>
-                                  <li><a class="dropdown-item" href="van-hoa.html">Văn hoá</a></li>
-                              </ul>
-                              <ul>
-                                  <li><a class="dropdown-item" href="am-thuc.html">Ẩm Thực</a></li>
-                              </ul>
-                              <ul>
-                                  <li><a class="dropdown-item" href="cong-nghe.html">Công Nghệ</a></li>
-                              </ul>
-                          </div>
-                      </li>
-                  </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                        <button class="btn btn-outline-light" type="button">Login</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Banner Section -->
-    <section class="banner">
-        <div class="header-ribbon">
-            <h1><img src="" alt="" /></h1>
+        <!-- Video Background -->
+        <div class="video-background">
+            <video autoplay loop muted playsinline class="background-video">
+                <source src="./img/video.mp4" type="video/mp4">
+            </video>
         </div>
-    </section>
+        <!-- Header with Navbar -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #fdfeff6e">
+                <div class="container-fluid">
+                    <div class="navbar__logo">
+                        <img src="./img/1722658958865.png" alt="logo image" />
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="the-thao.html">Thể thao</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="van-hoa.html">Văn hoá</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="am-thuc.html">Ẩm Thực</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="cong-nghe.html">Công Nghệ</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                            <button class="btn btn-outline-light" type="button">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Banner Section -->
+        <section class="banner">
+            <div class="header-ribbon">
+            </div>
+        </section>
 
     <!-- Main Blog Section -->
     <section class="container mt-5">
         <div class="row">
             <div class="col-lg-8">
-                <!-- Blog Post 1 -->
+                <!-- Blog Post Example 1 -->
                 <div class="card mb-4">
-                    <img src="./Blog/blog img/khelif-1.png" class="card-img-top" alt="TT1">
+                    <img src="./Blog/blog img/chuaba.jpg" class="card-img-top" alt="VV1">
                     <div class="card-body">
-                        <h5 class="card-title">Khelif muốn vô địch Olympic để đáp trả tranh cãi giới tính"</h5>
-                        <p class="card-text">  Võ sĩ Algeria Imane Khelif xem việc giành HC vàng quyền Anh hạng 66kg nữ là cách tốt nhất để đáp trả những áp lực vì tranh cãi giới tính nhắm vào cô từ đầu Olympic Paris 2024.</p>
-                        <p class="card-views">Views: <span id="views-post-1">0</span></p>
-                        <a href="./Blog/TT-khelif.html" class="btn btn-primary" onclick="incrementViews('views-post-1')">Read More</a>
+                        <h5 class="card-title">Một ngày khám phá núi Bà Đen</h5>
+                        <p class="card-text">Núi Bà Đen sở hữu sáu ngôi chùa từ chân lên lưng chừng núi cùng nhiều hoạt động tâm linh giúp du khách có trải nghiệm trọn vẹn trong một ngày...</p>
+                        <p class="card-views">Views: <span id="views-post-2">0</span></p>
+                        <a href="/Blog/DL-kpnuibaden.html" class="btn btn-primary" onclick="incrementViews('views-post-2')">Read More</a>
                     </div>
                 </div>
-                <!-- Blog Post 2 -->
+                <!-- Blog Post Example 2 -->
                 <div class="card mb-4">
-                    <img src="./Blog/blog img/amthuc.jpg" class="card-img-top" alt="AT2">
+                    <img src="./Blog/blog img/dglm-1.png" class="card-img-top" alt="VV2">
                     <div class="card-body">
-                        <h5 class="card-title">Nhật Bản nỗ lực hút khách bằng mì ramen</h5>
-                        <p class="card-text">Các thành phố nhỏ ở Nhật Bản dùng mì ramen làm trọng tâm quảng bá du lịch nhằm thu hút khách, mang lại sức sống mới cho nền kinh tế địa phương...</p>
+                        <h5 class="card-title">Con đường 'lãng mạn nhất thế giới' tái mở cửa</h5>
+                        <p class="card-text">Sau 12 năm đóng cửa sửa chữa, con đường lãng mạn nhất thế giới, Via dell'Amore, mở cửa đón khách trở lại...</p>
                         <p class="card-views">Views: <span id="views-post-2">0</span></p>
-                        <a href="/Blog/AT-banhtrungthu.html" class="btn btn-primary" onclick="incrementViews('views-post-2')">Read More</a>
+                        <a href="/Blog/DL-condglangman.html" class="btn btn-primary" onclick="incrementViews('views-post-2')">Read More</a>
                     </div>
                 </div>
             </div>
@@ -107,24 +103,18 @@
             <div class="col-lg-4">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title">Search</h5>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
-                            <button class="btn btn-primary" type="button">Go!</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-4">
-                    <div class="card-body">
                         <h5 class="card-title">Categories</h5>
                         <ul class="list-unstyled mb-0">
-                          <li><a href="the-thao.html">Thể thao</a></li>
-                          <li><a href="van-hoa.html">Văn hóa</a></li>
-                          <li><a href="cong-nghe.html">Công Nghệ</a></li>
-                          <li><a href="giai-tri.html">Giải Trí</a></li>
+                            <li><a href="the-thao.html">Thể thao</a></li>
+                            <li><a href="van-hoa.html">Văn hóa</a></li>
+                            <li><a href="cong-nghe.html">Công Nghệ</a></li>
+                            <li><a href="giai-tri.html">Giải Trí</a></li>
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
                 <!-- Slideshow Section -->
                 <div class="slideshow-container">
