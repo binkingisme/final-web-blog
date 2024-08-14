@@ -150,4 +150,22 @@ img {
     }
   }
   
-  
+  #backToTopBtn {
+    display: none; /* Ẩn nút mặc định */
+    position: fixed; /* Để nút ở vị trí cố định */
+    bottom: 20px; /* Khoảng cách từ dưới cùng của trang */
+    right: 20px; /* Khoảng cách từ bên phải của trang */
+    z-index: 99; /* Đảm bảo nút nằm trên các phần tử khác */
+    font-size: 18px; /* Cỡ chữ */
+    background-color: #007bff; /* Màu nền của nút */
+    color: white; /* Màu chữ */
+    border: none; /* Bỏ viền */
+    outline: none; /* Bỏ viền khi nhấn */
+    cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
+    padding: 15px; /* Khoảng cách padding */
+    border-radius: 10px; /* Bo góc nút */
+}
+
+#backToTopBtn:hover {
+    background-color: #555; /* Màu nền khi hover */
+}

@@ -37,3 +37,21 @@
 
         
     });
+// Hiển thị nút khi cuộn xuống 20px từ đầu trang
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("backToTopBtn").style.display = "block";
+  } else {
+      document.getElementById("backToTopBtn").style.display = "none";
+  }
+}
+
+// Đưa người dùng về đầu trang khi nhấn vào nút
+function scrollToTop() {
+  document.body.scrollTop = 0; // Dành cho Safari
+  document.documentElement.scrollTop = 0; // Dành cho Chrome, Firefox, IE, và Opera
+}
