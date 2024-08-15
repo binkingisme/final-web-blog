@@ -55,3 +55,10 @@ function scrollToTop() {
   document.body.scrollTop = 0; // Dành cho Safari
   document.documentElement.scrollTop = 0; // Dành cho Chrome, Firefox, IE, và Opera
 }
+if (localStorage.getItem('page_view_count')) {
+    localStorage.setItem('page_view_count', Number(localStorage.getItem('page_view_count')) + 1);
+} else {
+    localStorage.setItem('page_view_count', 1);
+}
+
+document.getElementById('visitorCount').innerText = localStorage.getItem('page_view_count');
