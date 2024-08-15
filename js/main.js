@@ -55,3 +55,12 @@ function scrollToTop() {
   document.body.scrollTop = 0; // Dành cho Safari
   document.documentElement.scrollTop = 0; // Dành cho Chrome, Firefox, IE, và Opera
 }
+window.addEventListener('scroll', function() {
+    var elements = document.querySelectorAll('.fade-in');
+    elements.forEach(function(element) {
+      if (element.getBoundingClientRect().top < window.innerHeight) {
+        element.classList.add('visible');
+      }
+    });
+  });
+  
