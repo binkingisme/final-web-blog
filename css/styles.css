@@ -14,6 +14,7 @@ body {
   background-color: #000000;
   font-size: x-large;
 }
+
 .btn-login {
   background-color: #007bff;
   color: white;
@@ -26,15 +27,19 @@ body {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
+  transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
 }
 
 .btn-login:hover {
   background-color: #0056b3;
+  transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .slideshow-container {
   position: relative;
   max-width: 100%;
@@ -64,13 +69,16 @@ body {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
+
 .nav-link.dropdown-toggle {
   color: black;
 }
+
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+
 .news-header h2 {
   border: 2px solid black; /* Khung cho tiêu đề */
   padding: 10px;
@@ -82,11 +90,12 @@ body {
   /* Các tùy chỉnh khác cho phần nội dung */
   margin-top: 20px;
 }
+
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-.caption
-{
+
+.caption {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -106,7 +115,7 @@ body {
 .news {
   display: none;
   text-align: center;
-  color: #000000;;
+  color: #000000;
 }
 
 .active {
@@ -133,6 +142,7 @@ body {
 .next {
   right: 0;
 }
+
 /* Video Background */
 .video-background {
   position: fixed;
@@ -177,76 +187,77 @@ header {
   width: 100%;
   z-index: 1000; /* Ensures header is above the video */
 }
-       /* Navbar Styles */
-       .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 20px;
-        background-color: #333;
-        opacity: 0; /* Bắt đầu với opacity bằng 0 */
-        transform: translateY(-50px); /* Đặt vị trí ban đầu */
-        animation: slideDown 1s ease forwards; /* Kích hoạt hiệu ứng */
-    }
 
-    .navbar__logo img {
-        width: 180px;
-        cursor: pointer;
-        object-fit: cover;
-    }
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #333;
+  opacity: 0; /* Bắt đầu với opacity bằng 0 */
+  transform: translateY(-50px); /* Đặt vị trí ban đầu */
+  animation: slideDown 1s ease forwards; /* Kích hoạt hiệu ứng */
+}
 
-    .navbar-brand {
-        font-size: 1.4em;
-        color: #ffffff;
-    }
+.navbar__logo img {
+  width: 180px;
+  cursor: pointer;
+  object-fit: cover;
+}
 
-    .navbar-nav {
-        display: flex;
-        list-style: none;
-    }
+.navbar-brand {
+  font-size: 1.4em;
+  color: #ffffff;
+}
 
-    .navbar-nav li {
-        margin: 0 15px;
-    }
+.navbar-nav {
+  display: flex;
+  list-style: none;
+}
 
-    .navbar-dark .navbar-nav a.nav-list {
-        color: #ffffff;
-        font-size: 1.1em;
-        text-decoration: none;
-        position: relative;
-        transition: color 0.3s ease;
-    }
+.navbar-nav li {
+  margin: 0 15px;
+}
 
-    .navbar-dark .navbar-nav a.nav-list::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        background-color: #ffffff;
-        left: 0;
-        bottom: -5px;
-        transition: width 0.3s ease;
-    }
+.navbar-dark .navbar-nav a.nav-list {
+  color: #ffffff;
+  font-size: 1.1em;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
 
-    .navbar-dark .navbar-nav a.nav-list:hover {
-        color: #ffcc00;
-    }
+.navbar-dark .navbar-nav a.nav-list::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
 
-    .navbar-dark .navbar-nav a.nav-list:hover::after {
-        width: 100%;
-    }
+.navbar-dark .navbar-nav a.nav-list:hover {
+  color: #ffcc00;
+}
 
-    /* Hiệu ứng xuất hiện */
-    @keyframes slideDown {
-        from {
-            opacity: 0%;
-            transform: translateY(-50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+.navbar-dark .navbar-nav a.nav-list:hover::after {
+  width: 100%;
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes slideDown {
+  from {
+    opacity: 0%;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .dropdown-menu {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -258,10 +269,10 @@ header {
 
 @media only screen and (min-width: 992px) {
   .dropdown:hover .dropdown-menu {
-      display: flex;
+    display: flex;
   }
   .dropdown-menu.show {
-      display: flex;
+    display: flex;
   }
 }
 
@@ -293,16 +304,16 @@ header {
 
 @media only screen and (max-width: 992px) {
   .dropdown-menu.show {
-      flex-wrap: wrap;
-      max-height: 350px;
-      overflow-y: scroll;
+    flex-wrap: wrap;
+    max-height: 350px;
+    overflow-y: scroll;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1140px) {
   .dropdown:hover .dropdown-menu {
-      width: 40vw;
-      flex-wrap: wrap;
+    width: 40vw;
+    flex-wrap: wrap;
   }
 }
 
@@ -331,17 +342,17 @@ header {
 
 @media screen and (min-width: 993px) {
   .dropdown:hover .dropdown-menu {
-      display: flex;
+    display: flex;
   }
   .dropdown-menu.show {
-      display: flex;
+    display: flex;
   }
 }
 
 @media screen and (max-width: 992px) {
   .dropdown-menu.show {
-      max-height: 60vh;
-      overflow-y: scroll;
+    max-height: 60vh;
+    overflow-y: scroll;
   }
 }
 
@@ -388,6 +399,7 @@ footer {
   background-color: #2c2c2c;
   color: white;
 }
+
 #backToTopBtn {
   display: none; /* Ẩn nút mặc định */
   position: fixed; /* Để nút ở vị trí cố định */
@@ -402,35 +414,10 @@ footer {
   cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
   padding: 15px; /* Khoảng cách padding */
   border-radius: 10px; /* Bo góc nút */
+  transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
 }
 
 #backToTopBtn:hover {
   background-color: #555; /* Màu nền khi hover */
-}
-.parallax {
-  background-image: url('path_to_your_image.jpg');
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.scroll-effect {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.scroll-effect.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-/* Fade-in effect */
-.fade-in {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
+  transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
 }
