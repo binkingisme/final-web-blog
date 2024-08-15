@@ -265,14 +265,21 @@ header {
   border-radius: 0;
   padding: 0.7em;
   font-weight: bold;
+  opacity: 0; /* Ban đầu không hiển thị */
+  transform: translateY(-10px); /* Ban đầu đẩy lên một chút */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển đổi */
 }
 
 @media only screen and (min-width: 992px) {
   .dropdown:hover .dropdown-menu {
     display: flex;
+    opacity: 1; /* Hiển thị khi hover */
+    transform: translateY(0); /* Trở về vị trí ban đầu */
   }
   .dropdown-menu.show {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -322,6 +329,9 @@ header {
   border: none;
   padding: 0.5em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown-menu ul {
@@ -343,9 +353,13 @@ header {
 @media screen and (min-width: 993px) {
   .dropdown:hover .dropdown-menu {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
   .dropdown-menu.show {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
